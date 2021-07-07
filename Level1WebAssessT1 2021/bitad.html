@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>(FAKE) FREE BITCOIN!!!</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="images/bitimage.png">
+    </head>
+    <body>
+        <h1>Generating Bitcoin... (not really) <a href="index.html">Click here to return.</a></h1>
+        <div id="pasteArea">
+        </div>
+        
+        <template id="bitPaste">
+            <img src="images/bitimage.png" width="10%" height="10%">
+        </template>
+        <!-- Removed until I decide to fix it if I ever would want to
+        <template id="bitCursorPaste">
+            <img id="stampimage" src="images/bitimage.png" width="3%" height="3%" style="position: absolute;">
+        </template>
+        -->
+        <script>
+            setInterval(() => {
+                var ad_temp = document.getElementById("bitPaste");
+                var ad_clone = ad_temp.content.cloneNode(true);
+                var ad_pasteArea = document.getElementById("pasteArea");
+                ad_pasteArea.append(ad_clone);
+            }, 500);
+            /*setInterval(() => {
+                var ad_mouse_stamp = document.getElementById("bitCursorPaste");
+                var ad_mouse_stamp_image = document.getElementById("stampimage");
+                var mouse_x = event.pageX;
+                var mouse_y = event.pageY;
+                ad_mouse_stamp_image.style.left = mouse_x + "px";
+                ad_mouse_stamp_image.style.top = mouse_y + "px";
+                var ad_mouse_clone = ad_mouse_stamp.content.cloneNode(true);
+                document.html.append(ad_mouse_clone);
+            }, 50);*/ //Should work but it doesn't.
+        </script>
+    </body>
+</html>

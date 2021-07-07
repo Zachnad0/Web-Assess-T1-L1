@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><!--Code by Zachary Hobbs 2021-->
+	<head>
+		<link href="styles.css" rel="stylesheet" media="screen">
+		<link href="images/favicon.png" rel="icon">
+		<!--all images are locally stored-->
+		<meta charset="utf-8">
+		<title>Lvl.1 Assessment Page</title>
+	</head>
+	<body>
+
+		<!--Center piece title below-->
+		<div class="centerpiece" title="Don't question this">
+			<h2 style="margin: 0;">Welcome to my very strange website!</h2>
+			<p>
+				Hover over any of the boxes in the corners to enlargen them!<br>All images are locally stored<br>Image credits can be found in the style sheet<br>HTML, CSS, and Javascript by: &copy;Zachary Hobbs 2021
+			</p>
+		</div>
+
+		<!--Info/text/pop-up containers below-->
+		<div class="main-containers" class="lefty" id="TopLeftCont">
+			<h2 class="titletext">How I made this strange website (part 1)</h2>
+			<p class="paratext">
+				There are multiple CSS animations used in this "website". How you make an animation is by first naming the animation in your stylesheet under the selector of the element you wish to animate. the syntax goes like so: <span class="codestuff">animation-name:[insert name here];</span><br>Remember, never include the square brackets, they just show you what is interchangeable. Next, you are going to want to set a total duration using this CSS tag:<br>
+				<span class="codestuff">animation-duration:[however many seconds you want][s for seconds or ms for milliseconds];</span> Now set a direction. The different modes are self explanatory, except for alternate, which goes forwards and then backwards constantly in a loop for as long as another tag in the seconds part specifies:<br>
+				<span class="codestuff">animation-direction:[normal/reverse/alternate/reverse alternate];</span> GO TO PART 2 -->
+			</p>
+		</div>
+
+		<div class="main-containers" id="TopRightCont">
+			<h2 class="titletext">How I made this strange website (part 2)</h2>
+			<p class="paratext">
+				Read the first part now if you have not yet. Now you may want to set the fill mode. The fill mode is only usefull if you don't want the animation to play on loop by freezing it on the first or last frame like so: <span class="codestuff">animation-fill-mode:[forwards/backwards];</span> There is one more very important tag that you may want for your animation if you want to loop it, it is the:<br>
+				<span class="codestuff">animation-iteration-count:[amount/infinite];</span> change amount to be a number of however many times you want it to loop, if at all, or put in infinite for it to loop, well, infinitely. Now for the keyframes. keyframes go from 0% to 100%, and transition between each state at the necessary speed needed to finish the animation in the time set as the animation duration. To specify and animate, GO TO PART 3 (bottom right corner).
+			</p>
+		</div>
+
+		<div class="main-containers" id="BottomLeftCont" style="overflow-y: auto;">
+			<h2 class="titletext">How I made this strange website (part 4)</h2>
+			<p class="paratext">
+				Read the first part now if you have not yet. Here I am going to show you two examples of animations I have used on the website. Here is the animation for the animated central div container:<br><span class="codestuff">@keyframes centerpieceBackground {
+					from {
+						width: 40%;
+						height:28%;
+						top: 36%;
+						left: 29%;
+					}
+					to {
+						width: 60%;
+						height:48%;
+						top: 26%;
+						left: 19%;
+					}
+				}</span><br>Here are the css animation controls: <span class="codestuff">animation-name: centerpieceBackground;
+					animation-duration: 2s;
+					animation-play-state: running;
+					animation-direction: alternate;
+					animation-iteration-count: infinite;
+					animation-delay: 0.5s;</span><br>Here is another animation from my site that controls the background:<br><span class="codestuff">@keyframes strobe-bg {
+					0% {background-color: blue;}
+					25% {background-color: purple;}
+					50% {background-color:orange;}
+					75% {background-color:green;}
+					100% {background-color: red;} 
+				}</span><br>And here are the CSS controls: <span class="codestuff">animation-name: strobe-bg;
+					animation-iteration-count: infinite;
+					animation-duration: 3s;
+					animation-direction: alternate;
+				</span>
+			</p>
+		</div>
+
+		<div class="main-containers" id="BottomRightCont" style="overflow-y: scroll;">
+			<h2 class="titletext">How I made this strange website (part 3)</h2>
+			<p class="paratext">
+				Read the first part now if you have not yet. Now to make some keyframes. Start off by making a keyrfame in your stylesheet like so: <span class="codestuff">@keyframes [animation name] {[animations in here]}</span><br>Replace the first square brackets section with the name of the animation which you have specified already. To program the animation, you must specifiy the starting ending position, or enter percentages to specifiy at what percentage of the time through the animation will it do something. Here is an example of a simple to and from animation keyframe setup that changes the background color from blue to green:<br><span class="codestuff">@keyframes example {from{background-color:blue;} to{background-color:green;}}</span><br>Now here is one that has 4 steps increasing by (100%/4 == 25% per step): <span class="codestuff">@keyframes example {0%{color:red;} 25%{color:green;} 50%{color:blue;} 75%{color:yelllow;}}</span>
+			</p>
+		</div>
+
+		<!--Fake advertisements?, yes please!-->
+		<div id="advertisement">
+			<h4>
+				Do <span class="emphasize">YOU</span> want <span class="emphasize">FREE BITCOIN???</span>
+			</h4>
+			<img id="bitimage" src="images/bitimage.png" title="FREE BITCOIN HERE!!!">
+			<a style="text-decoration:none;" href="bitad.html"><h2 title="CLICK HERE NOW!!!">BUY 4 FREE</h2></a>
+			<div title="please don't!" id="xbutton"><b>X</b></div>
+		</div>
+		<script>//just some stuff down 'ere to go every second to move the advertisement radomly within the designated limitations
+			setInterval(() => {
+				var ad_div = document.getElementById("advertisement");
+				//var ad_button = document.getElementById("xbutton"); //unused now
+				//ad_button.addEventListener('click',a => { //Previously had it on button click
+					ad_div.style.setProperty("--posx", Math.floor(Math.random()*(60-0)+0)+"%");
+					ad_div.style.setProperty("--posy", Math.floor(Math.random()*(83-0)+0)+"%");
+				//});
+			}, 1500);
+		</script>
+	</body>
+</html><!--Code by Zachary Hobbs 2021-->
