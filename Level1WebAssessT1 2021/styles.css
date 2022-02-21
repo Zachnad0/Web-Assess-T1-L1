@@ -1,7 +1,11 @@
 /*Code by Zach 2021*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
 /*Font imports above*/
-html,body {
+
+html,
+body {
     min-height: 100%;
     min-width: 100%;
     max-height: 100%;
@@ -11,24 +15,28 @@ html,body {
     animation-iteration-count: infinite;
     animation-duration: 3s;
     animation-direction: alternate;
-    cursor:url('images/favicon.png'),pointer; /*"Metal Plate Texture" by 3dtextures.me is marked under CC0 1.0. To view the terms, visit https://creativecommons.org/licenses/cc0/1.0/*/
+    cursor: url('images/favicon.png'), pointer;
+    /*"Metal Plate Texture" by 3dtextures.me is marked under CC0 1.0. To view the terms, visit https://creativecommons.org/licenses/cc0/1.0/*/
 }
+
 p {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .centerpiece {
     text-align: center;
     font-size: 16px;
-    font-family:'bungee inline', serif;
-    width:40%;
-    height:28%;
+    font-family: 'bungee inline', serif;
+    width: 40%;
+    height: 28%;
+    color: white;
     position: absolute;
     border: grey 6px groove;
-    top: 36%;
-    left: 29%;
+    /* top: 36%;
+    left: 29%; */
     z-index: 2;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.5),rgba(0, 100, 0, 0.5) 58%);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 82, 0, 0.9) 58%);
     /*Animation plays 'cos of this*/
     animation-name: centerpieceBackground;
     animation-duration: 2s;
@@ -38,16 +46,20 @@ p {
     animation-delay: 0.5s;
     border-radius: 8%;
 }
+
 .centerpiece h2 {
     font-size: 20px;
 }
+
 .titletext {
     font-size: 6px;
     margin: 0;
 }
+
 .paratext {
     font-size: 6px;
 }
+
 .main-containers {
     height: 20%;
     width: 20%;
@@ -60,57 +72,76 @@ p {
     z-index: 3;
     transition: 1s width, 0.5s height;
     border-radius: 8%;
-    background-image: url('images/main_containers_background.png'); /*"Wall Metal Plate 01" by Filter Forge is licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/*/
+    background-image: url('images/main_containers_background.png');
+    /*"Wall Metal Plate 01" by Filter Forge is licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/*/
     color: white;
-    text-shadow:1px 1px 10px darkgreen;
+    text-shadow: 1px 1px 10px darkgreen;
     overflow-y: hidden;
+    user-select: none;
 }
+
 #TopLeftCont {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     animation-name: leftout;
 }
+
 #TopRightCont {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     animation-name: rightout;
 }
+
 #BottomLeftCont {
     position: absolute;
     bottom: 0;
     left: 0;
     animation-name: leftout;
 }
+
 #BottomRightCont {
     position: absolute;
     bottom: 0;
     right: 0;
     animation-name: rightout;
 }
-.main-containers:hover {
-    height:75%;
-    width:75%;
+
+
+/* skewing */
+
+
+/* #BottomRightCont:hover,
+#TopLeftCont:hover {
+    transform: skewX(3deg);
+    transform: skewY(3deg);
 }
-#BottomRightCont:hover, #TopLeftCont:hover {
-    transform:skewX(3deg);
-    transform:skewY(3deg);
+
+#BottomLeftCont:hover,
+#TopRightCont:hover {
+    transform: skewX(-3deg);
+    transform: skewY(-3deg);
+} */
+
+.main-containers:active {
+    height: 100%;
+    width: 100%;
+    z-index: 8;
 }
-#BottomLeftCont:hover, #TopRightCont:hover {
-    transform:skewX(-3deg);
-    transform:skewY(-3deg);
-}
-.main-containers:hover .titletext {
+
+.main-containers:active .titletext {
     font-size: 30px;
 }
-.main-containers:hover .paratext {
+
+.main-containers:active .paratext {
     font-size: 20px;
     margin: 0;
 }
+
 #advertisement {
-    --posx:29%;
-    --posy:0;
+    --posx: 29%;
+    --posy: 0;
     z-index: 1;
     position: absolute;
     bottom: var(--posy);
@@ -118,16 +149,19 @@ p {
     width: 40%;
     height: 15%;
     font-family: sans-serif;
-    background-color:cornsilk;
+    background-color: cornsilk;
     border: blue 4px solid;
     padding: 5px;
     transition: 0.5s;
+    user-select: none;
 }
+
 #advertisement h4 {
     font-size: 20px;
     margin-left: 20%;
     margin-bottom: 2px;
 }
+
 #advertisement h2 {
     color: cornsilk;
     background-color: green;
@@ -139,15 +173,18 @@ p {
     height: fit-content;
     margin-left: 35%;
     margin-top: 2%;
-    padding:5px;
+    padding: 5px;
 }
+
 #advertisement h2:hover {
     background-color: red;
 }
+
 #advertisement .emphasize {
     font-weight: bolder;
     text-decoration: black underline;
 }
+
 #bitimage {
     position: relative;
     top: -55px;
@@ -156,6 +193,7 @@ p {
     margin: 0;
     /*"bitcoin" by komersreal is licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/*/
 }
+
 #xbutton {
     width: 27px;
     height: 27px;
@@ -164,52 +202,81 @@ p {
     border-bottom: rgb(255, 92, 92) 3px solid;
     border-right: rgb(255, 92, 92) 3px solid;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     text-align: center;
     font-family: sans-serif;
     font-size: 25px;
 }
+
 #xbutton:hover {
     border-bottom: darkred 3px solid;
     border-right: darkred 3px solid;
 }
+
 #xbutton:active {
     background-color: darkred;
 }
+
 .codestuff {
     font-family: monospace;
     text-shadow: none;
     background-color: black;
 }
+
+
 /*Animation keyframes below*/
+
 @keyframes leftout {
-    0% {left: 0;}
-    100% {left: -60%;}
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -60%;
+    }
 }
+
 @keyframes rightout {
-    0% {right: 0;}
-    100% {right: -60%;}
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -60%;
+    }
 }
+
 @keyframes strobe-bg {
-    0% {background-color: blue;}
-    25% {background-color: purple;}
-    50% {background-color:orange;}
-    75% {background-color:green;}
-    100% {background-color: red;} 
+    0% {
+        background-color: blue;
+    }
+    25% {
+        background-color: purple;
+    }
+    50% {
+        background-color: orange;
+    }
+    75% {
+        background-color: green;
+    }
+    100% {
+        background-color: red;
+    }
 }
+
 @keyframes centerpieceBackground {
     from {
         width: 40%;
-        height:28%;
+        height: 28%;
         top: 36%;
         left: 29%;
     }
     to {
         width: 60%;
-        height:48%;
+        height: 48%;
         top: 26%;
         left: 19%;
     }
 }
+
+
 /*Code by Zach 2021*/
