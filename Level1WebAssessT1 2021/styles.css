@@ -139,7 +139,7 @@ p {
     margin: 0;
 }
 
-#advertisement {
+.advertisement {
     --posx: 29%;
     --posy: 0;
     z-index: 1;
@@ -154,15 +154,16 @@ p {
     padding: 5px;
     transition: 0.5s;
     user-select: none;
+    text-align: center;
 }
 
-#advertisement h4 {
+.advertisement h4 {
     font-size: 20px;
     margin-left: 20%;
     margin-bottom: 2px;
 }
 
-#advertisement h2 {
+.advertisement h2 {
     color: cornsilk;
     background-color: green;
     border: transparent solid 4px;
@@ -176,22 +177,23 @@ p {
     padding: 5px;
 }
 
-#advertisement h2:hover {
+.advertisement h2:hover {
     background-color: red;
 }
 
-#advertisement .emphasize {
+.advertisement .emphasize {
     font-weight: bolder;
     text-decoration: black underline;
 }
 
-#bitimage {
+.adimages {
     position: relative;
     top: -55px;
     height: 100%;
     float: right;
     margin: 0;
     /*"bitcoin" by komersreal is licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/*/
+    /*"Official Ethereum Classic Logo" by EthereumClassic is licensed under CC0 1.0. To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/?ref=openverse&atype=rich*/
 }
 
 #xbutton {

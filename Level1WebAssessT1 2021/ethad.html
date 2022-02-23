@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ethereum "Mining"!</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/ethimage.png">
+</head>
+
+<body>
+    <h1>Grinding for Ethereum...<a href="index.html">Click here to return.</a></h1>
+    <div id="pasteArea">
+    </div>
+
+    <template id="ethPaste">
+            <img src="images/ethimage.png" width="10%" height="10%">
+        </template>
+    <script>
+        setInterval(() => {
+            var ad_temp = document.getElementById("ethPaste");
+            var ad_clone = ad_temp.content.cloneNode(true);
+            var ad_pasteArea = document.getElementById("pasteArea");
+            ad_pasteArea.append(ad_clone);
+        }, 200);
+    </script>
+</body>
+
+</html>

@@ -88,20 +88,41 @@
     </div>
 
     <!--Fake advertisements?, yes please!-->
-    <div id="advertisement">
+    <div id="btc_advertisement" class="advertisement">
         <h4>
             Do <span class="emphasize">YOU</span> want <span class="emphasize">FREE BITCOIN???</span>
         </h4>
-        <img id="bitimage" src="images/bitimage.png" title="FREE BITCOIN HERE!!!">
+        <img id="bitimage" class="adimages" src="images/bitimage.png" title="FREE BITCOIN HERE!!!">
         <a style="text-decoration:none;" href="bitad.html">
             <h2 title="CLICK HERE NOW!!!">BUY 4 FREE</h2>
         </a>
         <div title="please don't!" id="xbutton"><b>X</b></div>
+
     </div>
+    <div id="eth_advertisement" class="advertisement">
+        <h4>
+            Want to cheaply <span class="emphasize">MINE</span> some <span class="emphasize">ETHEREUM???</span>
+        </h4>
+        <img id="ethimage" class="adimages" src="images/ethimage.png" title="FREE ETHEREUM HERE!!!">
+        <a style="text-decoration:none;" href="ethad.html">
+            <h2 title="CLICK HERE NOW!!!">MINE TODAY</h2>
+        </a>
+        <div title="please don't!" id="xbutton"><b>X</b></div>
+    </div>
+
     <script>
         //just some stuff down 'ere to go every second to move the advertisement radomly within the designated limitations
         setInterval(() => {
-            var ad_div = document.getElementById("advertisement");
+            var ad_div = document.getElementById("btc_advertisement");
+            //var ad_button = document.getElementById("xbutton"); //unused now
+            //ad_button.addEventListener('click',a => { //Previously had it on button click
+            ad_div.style.setProperty("--posx", Math.floor(Math.random() * (60 - 0) + 0) + "%");
+            ad_div.style.setProperty("--posy", Math.floor(Math.random() * (83 - 0) + 0) + "%");
+            //});
+        }, 1500);
+
+        setInterval(() => {
+            var ad_div = document.getElementById("eth_advertisement");
             //var ad_button = document.getElementById("xbutton"); //unused now
             //ad_button.addEventListener('click',a => { //Previously had it on button click
             ad_div.style.setProperty("--posx", Math.floor(Math.random() * (60 - 0) + 0) + "%");
